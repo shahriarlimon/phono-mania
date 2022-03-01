@@ -101,7 +101,7 @@ const displaySinglePhoneDetails = (features) => {
             </h2>
             <h2 class="text-3xl mt-3 font-semibold">Others </h2>
             <h2 class="text-xl">WLAN: ${features.data.others.WLAN}</h2>
-            <h2 class="text-xl">BluetoothBluetooth: ${
+            <h2 class="text-xl">Bluetooth: ${
               features.data.others.Bluetooth
             }</h2>
             <h2 class="text-xl">GPS: ${features.data.others.GPS}</h2>
