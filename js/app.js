@@ -68,19 +68,20 @@ const displaySinglePhoneDetails=features=>{
     <div class="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between shadow-lg p-8">
         <div>
         <img class="rounded-t-lg mb-2" width="400px" height="300px" src="${features.data.image}" alt="">
-        <h2 class="text-xl">Release Date: ${features.data.releaseDate ? features.data.releaseDate:'Not found'}</h2>
+        <h2 class="text-2xl">Release Date: ${features.data.releaseDate ? features.data.releaseDate:'Not found'}</h2>
         </div>
         <div class="md:mr-24 md:ml-5 mt-5 md:mt-0 py-3">
-            <h2 class="text-3xl">Name and Brand </h2>
+            <h2 class="text-3xl font-semibold">Name and Brand </h2>
             <h2 class="text-xl">Name: ${features.data.name}</h2>
             <h2 class="text-xl">Brand: ${features.data.brand}</h2>
-            <h2 class="text-3xl mt-3">Main Features</h2>
+            <h2 class="text-3xl mt-3 font-semibold">Main Features</h2>
             <h2 class="text-xl">Storage: ${features.data.mainFeatures.storage}</h2>
             <h2 class="text-xl">Display Size: ${features.data.mainFeatures.displaySize}</h2>
             <h2 class="text-xl">Chipset: ${features.data.mainFeatures.chipSet}</h2>
             <h2 class="text-xl">Memory: ${features.data.mainFeatures.memory}</h2>
-            <h2 class="text-xl">Sensor: ${features.data.mainFeatures.sensors[0]}</h2>
-            <h2 class="text-3xl mt-3">Others </h2>
+            <h2 class="text-xl">Sensor: ${features.data.mainFeatures.sensors[0]}, ${features.data.mainFeatures.sensors[1]}, ${features.data.mainFeatures.sensors[2]}, ${features.data.mainFeatures.sensors[3]}, ${features.data.mainFeatures.sensors[4]}, ${features.data.mainFeatures.sensors[5]}
+            </h2>
+            <h2 class="text-3xl mt-3 font-semibold">Others </h2>
             <h2 class="text-xl">WLAN: ${features.data.others.WLAN}</h2>
             <h2 class="text-xl">BluetoothBluetooth: ${features.data.others.Bluetooth}</h2>
             <h2 class="text-xl">GPS: ${features.data.others.GPS}</h2>
