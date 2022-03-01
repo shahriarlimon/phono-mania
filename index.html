@@ -1,82 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Mania</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhonoMania</title>
     <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="my-12 mx-12 flex flex-col items-center justify-center">
-        <h2 class="text-4xl font-bold text-indigo-600 text-center">Phone Mania</h2>
-        <p class="text-xl mt-2 text-center">Choose and Get your best Phone out there!</p>
+      <h2 class="text-4xl font-bold text-indigo-600 text-center">PhonoMania</h2>
+      <p class="text-xl mt-2 text-center">
+        Choose and Get your best Phone out there!
+      </p>
     </header>
     <main class="my-24 mx-12">
-        <!-- search section -->
-        <section class=" relative flex flex-col md:flex-row items-center justify-center">
-            <input id="input-field" class="px-8 py-5 rounded-lg border border-indigo-600 focus:outline-0 w-full md:w-1/4 shadow-lg mb-3" type="text" placeholder="Enter Phone Name">
-            <span id="error" class="absolute text-sm text-red-800 md:mt-28 font-bold"></span>
-            <button onclick="loadPhones()" class="mb-2 px-8 py-5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold mt-3 md:ml-3">Search</button>
-        </section>
-        <!-- RESULT SECTION -->
-        <h2 class="text-3xl font-bold text-center mt-12">Your Results :</h2>
-        <section class=" mt-8 min-h-min relative">  
-              <!-- PHONE DETAILS PORTION -->
-            <div id="single-phone-details" class="bg-green-200 shadow-lg rounded-md w-full md:w-10/12 md:ml-24 mt-12 hidden  absolute">
-                 <!-- <div class="relative ">
-                    <button onclick="close" class="flex justify-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                             <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                          </svg>
-                    </button>
-                </div>
-                  <div class="flex flex-col md:flex-row items-center justify-center md:justify-around shadow-lg p-8">
-                    <img class="rounded-t-lg mb-2" width="400px" height="300px" src="images/phone.jpg" alt="">
-                    <div class="md:mr-24">
-                        <h2 class="text-xl">Phone Name</h2>
-                        <h2 class="text-xl">Brand Name</h2>
-                        <h2 class="text-xl">Brand Name</h2>
-                        <h2 class="text-xl">Brand Name</h2>
-                        <h2 class="text-xl">Brand Name</h2>
-                        <h2 class="text-xl">Brand Name</h2>
-                    </div>
-
-                  </div> -->
-            </div>
-            <!-- ALL PHONE -->
-        <div id="phones-container" class="grid grid-cols-1 md:grid-cols-3 gap-12">
-               <!--  <div class="flex flex-col items-center justify-center border border-gray shadow-lg p-8">
-                    <img class="rounded-t-lg mb-2" width="300px" height="250px" src="images/phone.jpg" alt="">
-                    <h2 class="text-xl">Phone Name</h2>
-                    <h2 class="text-xl">Brand Name</h2>
-                    <button class=" mt-2 px-8 py-5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold md:ml-3">Search</button>
-                </div>
-                <div class="flex flex-col items-center justify-center border border-gray shadow-lg p-8">
-                    <img class="rounded-t-lg mb-2" width="300px" height="250px" src="images/phone.jpg" alt="">
-                    <h2 class="text-xl">Phone Name</h2>
-                    <h2 class="text-xl">Brand Name</h2>
-                    <button class=" mt-2 px-8 py-5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold md:ml-3">Search</button>
-                </div>
-                <div class="flex flex-col items-center justify-center border border-gray shadow-lg p-8">
-                    <img class="rounded-t-lg mb-2" width="300px" height="250px" src="images/phone.jpg" alt="">
-                    <h2 class="text-xl">Phone Name</h2>
-                    <h2 class="text-xl">Brand Name</h2>
-                    <button class=" mt-2 px-8 py-5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold md:ml-3">Search</button>
-                </div>
-                <div class="flex flex-col items-center justify-center border border-gray shadow-lg p-8">
-                    <img class="rounded-t-lg mb-2" width="300px" height="250px" src="images/phone.jpg" alt="">
-                    <h2 class="text-xl">Phone Name</h2>
-                    <h2 class="text-xl">Brand Name</h2>
-                    <button class=" mt-2 px-8 py-5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold md:ml-3">Search</button>
-                </div> -->
-        </div>
-            
-        </section>
-
+      <!-- search section -->
+      <section
+        class="relative flex flex-col md:flex-row items-center justify-center"
+      >
+        <input
+          id="input-field"
+          class="px-8 py-5 rounded-lg border border-indigo-600 focus:outline-0 w-full md:w-1/4 shadow-lg mb-3"
+          type="text"
+          placeholder="Enter Phone Name"
+        />
+        <span
+          id="error"
+          class="absolute text-sm text-red-800 md:mt-28 font-bold"
+        ></span>
+        <button
+          onclick="loadPhones()"
+          class="mb-2 px-8 py-5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold mt-3 md:ml-3"
+        >
+          Search
+        </button>
+      </section>
+      <!-- RESULT SECTION -->
+      <h2 class="text-3xl font-bold text-center mt-12">Your Results :</h2>
+      <section class="mt-8 min-h-min relative">
+        <!-- PHONE DETAILS PORTION -->
+        <div
+          id="single-phone-details"
+          class="bg-green-200 shadow-lg rounded-md w-full md:w-10/12 md:ml-24 mt-12 hidden absolute"
+        ></div>
+        <!-- ALL PHONES -->
+        <div
+          id="phones-container"
+          class="grid grid-cols-1 md:grid-cols-3 gap-12"
+        ></div>
+      </section>
     </main>
     <script src="js/app.js"></script>
-    
-</body>
+  </body>
 </html>
